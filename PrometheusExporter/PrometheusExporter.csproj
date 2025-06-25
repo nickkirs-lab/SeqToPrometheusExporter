@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<OutputType>Library</OutputType>
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+		<PackageId>PrometheusExporter</PackageId>
+		<Version>1.0.0</Version>
+		<Authors>Nikolai</Authors>
+		<Description>Prometheus exporter for filtered Seq logs</Description>
+		<PackageTags>seq;prometheus;exporter</PackageTags>
+		<PackageProjectUrl>https://github.com/nickkirs-lab</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/nickkirs-lab</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="prometheus-net" Version="8.0.0" />
+		<PackageReference Include="Seq.Apps" Version="2023.4.0" />
+		<PackageReference Include="YamlDotNet" Version="16.3.0" />
+	</ItemGroup>
+
+</Project>

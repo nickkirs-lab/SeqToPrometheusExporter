@@ -1,0 +1,13 @@
+job: seq-logs
+metrics:
+  - type: counter
+    name: aspnetcore_500_errors
+    filter: Level = 'Error' and StatusCode = 500
+    tags:
+      - '{AssemblyName}'
+  - type: counter
+    name: graphql_errors
+    filter: Level = 'Error' and EndPointName = 'Hot GraphQL Pipeline'
+    tags:
+      - '{AssemblyName}'
+      - '{Host}'
