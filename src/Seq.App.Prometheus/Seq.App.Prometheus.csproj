@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>Seq.App.Prometheus</PackageId>
+		<PackageTags>seq-app</PackageTags>
+		<PackageLicense>MIT</PackageLicense>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<Description>Collect metrics from log events and expose them in Prometheus format.</Description>
+		<Authors>Nikolai</Authors>
+		<RepositoryUrl>https://github.com/nickkirs-lab</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Seq.App.Prometheus.Tests"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="prometheus-net" Version="8.2.1"/>
+		<PackageReference Include="Seq.Apps" Version="2023.4.0"/>
+		<PackageReference Include="Seq.Syntax" Version="1.0.0"/>
+		<PackageReference Include="YamlDotNet" Version="16.3.0"/>
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Include="../../assets/icon.png" Pack="true" PackagePath="\"/>
+		<None Include="../../README.md" Pack="true" PackagePath="\"/>
+		<None Include="./bin/$(Configuration)/$(TargetFramework)/publish/**/*" Exclude="./bin/$(Configuration)/$(TargetFramework)/publish/$(MSBuildProjectName).dll;./bin/$(Configuration)/$(TargetFramework)/publish/Seq.Apps.dll;./bin/$(Configuration)/$(TargetFramework)/publish/Serilog.dll" Pack="true" PackagePath="lib/$(TargetFramework)"/>
+	</ItemGroup>
+
+</Project>

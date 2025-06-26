@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/harness/">
+    <Project Path="harness/Seq.App.Prometheus.TestHarness/Seq.App.Prometheus.TestHarness.csproj" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/Seq.App.Prometheus/Seq.App.Prometheus.csproj" />
+  </Folder>
+  <Folder Name="/test/">
+    <Project Path="test/Seq.App.Prometheus.Tests/Seq.App.Prometheus.Tests.csproj" />
+  </Folder>
+  <Folder Name="/Solution items/">
+    <File Path="README.md"/>
+  </Folder>
+</Solution>
