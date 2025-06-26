@@ -8,6 +8,7 @@
 
 	<PropertyGroup>
 		<PackageId>Seq.App.Prometheus</PackageId>
+		<Version>1.0.1</Version>
 		<PackageTags>seq-app</PackageTags>
 		<PackageLicense>MIT</PackageLicense>
 		<PackageIcon>icon.png</PackageIcon>
@@ -18,12 +19,16 @@
 		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 
+	<PropertyGroup>
+		<CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+	</PropertyGroup>
+
 	<ItemGroup>
 		<InternalsVisibleTo Include="Seq.App.Prometheus.Tests"/>
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="prometheus-net" Version="8.2.1"/>
+		<PackageReference Include="prometheus-net" Version="8.0.0"/>
 		<PackageReference Include="Seq.Apps" Version="2023.4.0"/>
 		<PackageReference Include="Seq.Syntax" Version="1.0.0"/>
 		<PackageReference Include="YamlDotNet" Version="16.3.0"/>
